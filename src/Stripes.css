@@ -1,0 +1,9 @@
+.stripes {
+    border: 1px solid #2D4B3E;
+    display: flex;
+    height: 400px;
+}
+
+.stripe {
+    flex-grow: 1;
+}
