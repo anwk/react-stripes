@@ -6,4 +6,14 @@
 
 .stripe {
     flex-grow: 1;
+    min-width: 1px;
 }
+
+.stripe:nth-child(even) {
+    background: #C0C0C0;
+}
+
+.stripe:nth-last-child(2) {
+    background: #FF6347;
+}
+
