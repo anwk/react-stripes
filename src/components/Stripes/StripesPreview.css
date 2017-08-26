@@ -7,3 +7,18 @@
     flex-grow: 1;
     min-width: 1px;
 }
+
+.stripe-preview {
+    flex-grow: 1;
+    min-width: 1px;
+}
+
+.stripe-preview:nth-child(even):hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.stripe-preview.clicked:hover {
+    cursor: default;
+    opacity: 1;
+}
