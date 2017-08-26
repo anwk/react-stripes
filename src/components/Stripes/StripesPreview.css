@@ -1,0 +1,9 @@
+.stripes-preview {
+    border: 1px solid #2D4B3E;
+    display: flex;
+}
+
+.stripe-preview {
+    flex-grow: 1;
+    min-width: 1px;
+}

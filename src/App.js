@@ -1,22 +1,42 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Stripes from './Stripes';
+import StripesManage, { StripesPreview } from './components/Stripes';
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.onChange = this.onChange.bind(this);
+    this.state = { amount: 8 };
+  }
+
+  onChange(amount) {
+    this.setState({ amount });
+  }
+
   render() {
+    const { amount } = this.state;
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <div className="App-intro">
-          <Stripes/>
+      <div className="content">
+        <StripesManage
+          amount={amount}
+          onChange={this.onChange}
+        />
+        <div>
+          <h3>Total lines: {amount}</h3>
+          <div className="stripes-row">
+            <StripesPreview amount={amount}/>
+            <StripesPreview amount={amount}/>
+          </div>
+          <div className="stripes-row">
+            <StripesPreview amount={amount}/>
+            <StripesPreview amount={amount}/>
+          </div>
         </div>
       </div>
     );
   }
 }
+
 
 export default App;

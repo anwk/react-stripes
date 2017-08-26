@@ -1,7 +1,13 @@
+.stripes-wrap {
+    display: flex;
+    flex-direction: column;
+    height: 325px;
+}
+
 .stripes {
     border: 1px solid #2D4B3E;
     display: flex;
-    height: 400px;
+    height: 100%;
 }
 
 .stripe {
@@ -17,3 +23,9 @@
     background: #FF6347;
 }
 
+.stripes-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
